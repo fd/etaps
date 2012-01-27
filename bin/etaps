@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+# vim: set filetype=ruby
+
+begin
+  require 'etaps'
+rescue LoadError
+  require 'rubygems'
+  $:.unshift(File.expand_path('../../lib', __FILE__))
+  require 'etaps'
+end
+
+Etaps.run ARGV[0]
