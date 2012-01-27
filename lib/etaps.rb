@@ -2,7 +2,9 @@ require "etaps/version"
 
 module Etaps
 
-  def self.run(source='production')
+  def self.run(source=nil)
+    source ||= 'production'
+
     unless File.file?('config/database.yml')
      $stderr.puts "No config/database.yml found!"
      exit 1
