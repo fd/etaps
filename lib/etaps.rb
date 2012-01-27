@@ -8,7 +8,9 @@ module Etaps
      exit 1
     end
 
+    require 'etc'
     require 'erb'
+    require 'yaml'
     require 'childprocess'
 
     config = YAML.load(ERB.new(File.read('config/database.yml')).result)
@@ -18,6 +20,7 @@ module Etaps
     server = ChildProcess.build("taps", "server", source, "a", "b")
     server.io.inherit!
     server.io.stdout = File.open('/dev/null', 'w')
+    server.io.stderr = File.open('/dev/null', 'w')
     server.start
 
     sleep 10
