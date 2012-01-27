@@ -22,5 +22,6 @@ Gem::Specification.new do |s|
   # s.add_development_dependency "rspec"
 
   s.add_runtime_dependency "taps"
-  s.add_runtime_dependency "childprocess"
+  s.add_runtime_dependency "childprocess", "~> 0.3"
+  s.add_runtime_dependency "mysql"
 end
