@@ -1,0 +1,1 @@
+{"name":"Etaps","body":"\r\n# Usage\r\n\r\n```bash\r\ncd rails/project\r\netaps         # pulls production db\r\netaps staging # pulls staging db\r\n```\r\n\r\n# Installation\r\n\r\n```bash\r\ngem install etaps\r\n```","tagline":"Super simple CLI for taps","google":"","note":"Don't delete this file! It's used internally to help with page regeneration."}
